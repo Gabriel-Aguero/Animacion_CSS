@@ -1,0 +1,100 @@
+/*    
+    animation-name: nombre del keyframes 
+    animation-duration duracion de la animacion en segundos ej. 1s
+    animation-iteration-count cuantas veces se va a repetir la animacion
+    puede ser infinite o 1 ves o 2 veces. 
+    animation-direction establece desde donde parte la animacion y a odonde termina        
+    animation-fill-mode determina lo que sucede antes y despues de que la animacion
+    se ejecute. Puede ser forwards, none
+    animation-delay el tiempo q espera para que la animacion se ejecute
+    animation-timing-function define la curva de aceleracion de la animacion
+    */
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ background: rgb(0, 0, 0);
+}
+
+.container{
+    display:flex;
+    justify-content:space-around;
+    
+}
+
+.circulo{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;    
+    animation: girando 2s 2s alternate infinite;
+}
+
+.circulo2{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;  
+    animation: girandodos 2s 2s alternate infinite;
+}
+
+@keyframes girando{
+    
+    0%{
+        transform: translate(0);
+        background:rgb(92, 238, 8);
+    }
+
+    25%{
+        transform: translate(100%);
+        background:rgb(238, 196, 8);
+    }
+
+    50%{
+        transform: translate(100%, 100%);
+        background:rgb(240, 111, 5);
+    }
+
+    75%{
+        transform: translate(0, 100%);
+        background:rgb(4, 37, 223);
+    }   
+}
+
+@keyframes girandodos{
+    
+    0%{
+        transform: translate(100%, 0);
+        background:rgb(92, 238, 8);
+    }
+
+    25%{
+        transform: translate(0%);
+        background:rgb(200, 6, 248);
+    }
+
+    50%{
+        transform: translate(0%, 100%);
+        background:rgb(245, 6, 6);
+    }
+
+    75%{
+        transform: translate(100%, 100%);
+        background:rgb(241, 245, 10);
+    }   
+
+    100%{
+        transform: translate(100%, 0%);
+        background:rgb(8, 85, 187);
+    }
+
+}
+
+
+
